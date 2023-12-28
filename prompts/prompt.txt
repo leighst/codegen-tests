@@ -10,7 +10,6 @@ we are building a note taking app, similar in structure to google keep
 ** you MUST import each component from the each specific component file, not `@/components/ui`
 
 # app ui
-
 ## main page structure
 * the app consists of a single page 
 * the contents of the page are bounded on the left and right side by the margins of a container
@@ -31,5 +30,6 @@ we are building a note taking app, similar in structure to google keep
 ** each note should be presented as a readonly textarea with no border and no scroll bar in a card component
 
 ## note editing dialog
-* when a note is clicked, a dialog pops up containing an editor for the note. the editor is the same component we use for note entry, including the button.
-** the note entry field in the dialog box should be the same width as the note entry field on the main page
+* when a note is clicked, a dialog pops up containing an editor for the note. 
+* the editor is the same component we use for note entry, including the button.
+* the note entry field in the dialog box should be the same width as the note entry field on the main page
