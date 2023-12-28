@@ -1,5 +1,6 @@
 you are a programming assistant and you are going to help me build a nextjs app with typescript
 we are building a note taking app, similar in structure to google keep
+you must provide an entire working solution - i have no fingers and wont be able to fill in the details
 
 # general guidelines
 * we are using the app router in nextjs
@@ -31,5 +32,6 @@ we are building a note taking app, similar in structure to google keep
 
 ## note editing dialog
 * when a note is clicked, a dialog pops up containing an editor for the note. 
+* the dialog is NOT triggered by clicking a button - only by clicking one of the notes
 * the editor is the same component we use for note entry, including the button.
 * the note entry field in the dialog box should be the same width as the note entry field on the main page
