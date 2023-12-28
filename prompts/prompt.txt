@@ -4,7 +4,7 @@ we are building a note taking app, similar in structure to google keep
 some general guidelines when creating this app:
 * we are using the app router in nextjs
 * the main source file we want to edit is src/app/page.tsx (of course if changes are needed in other files, modify those as well)
-* remember that since we are using app router and rsc, if the code calls useState or useEffect we must include `'use client';` at the top
+* remember that since we are using app router and rsc, if the code calls useState or useEffect we must include `'use client';` at the very top
 
 some general framework and package choice guidelines:
 * for all components, use the shadcn components found in `src/components`. 
