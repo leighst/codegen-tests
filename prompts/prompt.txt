@@ -35,3 +35,4 @@ you must provide an entire working solution - i have no fingers and wont be able
 * the dialog is NOT triggered by clicking a button - only by clicking one of the notes
 * the editor is the same component we use for note entry, including the button.
 * the note entry field in the dialog box should be the same width as the note entry field on the main page
+* to exit the dialog, the user can press the escape key
