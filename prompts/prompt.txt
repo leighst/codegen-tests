@@ -9,6 +9,15 @@ you must provide an entire working solution - i have no fingers and wont be able
 * for all components, use the shadcn components found in `src/components`. 
 ** for example, here is how to import the button component: `import { Button } from "@/components/ui/button";`
 ** you MUST import each component from the each specific component file, not `@/components/ui`
+* server actions should be created in src/app/, alongside the frontend logic
+** in our version of nextjs using the app router, server actions can be imported and invoked directly from within a callback
+
+# app backend
+## api / server actions
+* create three server actions: createNote, listNotes, updateNote
+* createNote creates a new note. for now, leave it unimplemented.
+* listNotes lists all notes. for now, simply return a list of 3 random notes.
+* updateNote modifies an existing note. for now, leave it unimplemented.
 
 # app ui
 ## main page structure
@@ -24,11 +33,13 @@ you must provide an entire working solution - i have no fingers and wont be able
 * beneath the header we have an editable note entry field, a text area. 
 * there is a button underneath it, left justified, which is used to submit the contents of the text entry field. 
 * there is some padding between the text entry field and the button.
+* when a note is added by clicking the button, the createNote server action should be called in a callback
 
 ## note list
 * beneath the note entry field we have the list of notes which have already been added
 ** the app's notes are organized as a single column
 ** each note should be presented as a readonly textarea with no border and no scroll bar in a card component
+* to fetch notes for the list, we invoke the listNotes server action from a useEffect 
 
 ## note editing dialog
 * when a note is clicked, a dialog pops up containing an editor for the note. 
@@ -36,3 +47,4 @@ you must provide an entire working solution - i have no fingers and wont be able
 * the editor is the same component we use for note entry, including the button.
 * the note entry field in the dialog box should be the same width as the note entry field on the main page
 * to exit the dialog, the user can press the escape key
+* to update a note, we call the updateNote server action from a callback
