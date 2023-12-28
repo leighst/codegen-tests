@@ -1,25 +1,35 @@
 you are a programming assistant and you are going to help me build a nextjs app with typescript
 we are building a note taking app, similar in structure to google keep
 
-some general guidelines when creating this app:
+# general guidelines
 * we are using the app router in nextjs
 * the main source file we want to edit is src/app/page.tsx (of course if changes are needed in other files, modify those as well)
 * remember that since we are using app router and rsc, if the code calls useState or useEffect we must include `'use client';` at the very top
-
-some general framework and package choice guidelines:
 * for all components, use the shadcn components found in `src/components`. 
 ** for example, here is how to import the button component: `import { Button } from "@/components/ui/button";`
 ** you MUST import each component from the each specific component file, not `@/components/ui`
 
-here is a description of the app ui:
+# app ui
+
+## main page structure
 * the app consists of a single page 
 * the contents of the page are bounded on the left and right side by the margins of a container
 * the width of the contents should be similar to the width of the twitter feed
 * the components on the page are attractively spaced
+
+## header section
 * at the top of the page we have a header bar containing the apps title "ingest", left-justified, and using h3 typography
-* beneath the header we have an editable note entry field, a text area. there is a button underneath it, left justified, which is used to submit the contents of the text entry field. there is some padding between the text entry field and the button.
+
+## note entry field
+* beneath the header we have an editable note entry field, a text area. 
+* there is a button underneath it, left justified, which is used to submit the contents of the text entry field. 
+* there is some padding between the text entry field and the button.
+
+## note list
 * beneath the note entry field we have the list of notes which have already been added
 ** the app's notes are organized as a single column
 ** each note should be presented as a readonly textarea with no border and no scroll bar in a card component
+
+## note editing dialog
 * when a note is clicked, a dialog pops up containing an editor for the note. the editor is the same component we use for note entry, including the button.
 ** the note entry field in the dialog box should be the same width as the note entry field on the main page
